@@ -1,0 +1,9 @@
+<launch>
+    <arg name="lamp_level" default="0"  />
+    <arg name="fps" default="30" />
+    <node pkg='pixy2_image_ros' type='pixy2_image_node' name='pixy2_test' output='screen' respawn='false'>
+        <param name="lamp" value="$(arg lamp_level)" />
+        <param name="fps" value="$(arg fps)" />
+    </node>
+
+</launch>
